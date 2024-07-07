@@ -1,3 +1,284 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display&display=swap");
+
+* {
+	padding: 0;
+	margin: 0;
+	border: none;
+	outline: none;
+	font-weight: 0;
+	list-style: none;
+	text-decoration: none;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Open Sans", sans-serif;
+	--peach: #fe7d91;
+	--grey: #cccbcb;
+	--butter: #fcf7f0;
+}
+
+.top-header {
+	display: grid;
+	grid-template-columns: repeat(
+		14,
+		1fr
+	);
+	padding: 20px;
+}
+
+.top-header .subheading {
+	display: grid;
+	grid-column-start: 1;
+	grid-column-end: 15;
+}
+
+.heading-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+	gap: 20px;
+}
+
+.heading-container .heading {
+	font-size: 16px;
+}
+
+.heading-container .head-links {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+	gap: 10px;
+}
+
+.heading-container .head-links a {
+	color: #000;
+	font-size: 12px;
+	font-weight: 600;
+}
+
+.heading-container .uti-icons {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+	gap: 12px;
+}
+
+.showcase-box {
+	display: grid;
+	grid-template-columns: repeat(
+		14,
+		1fr
+	);
+	padding: 50px 20px;
+	margin-block: 40px;
+}
+
+.showcase-container {
+	grid-column-start: 1;
+	grid-column-end: 15;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+	gap: 24px;
+	width: 100%;
+}
+
+.showcase-left {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+	flex-direction: column;
+	gap: 14px;
+}
+
+.showcase-left .text {
+	background: var(--peach);
+	color: #fff;
+	padding: 6px 10px;
+	font-size: 14px;
+	border-radius: 16px;
+	text-align: center;
+	display: inline-flex;
+	justify-content: start;
+	align-items: center;
+	flex-direction: row;
+	gap: 6px;
+	font-weight: 700;
+	align-self: start;
+}
+
+.text-catch {
+	font-family: "Playfair Display", serif;
+	width: 100%;
+	font-weight: 700;
+}
+
+.text-catch p {
+	width: 100%;
+	font-size: 30px;
+}
+
+.text-catch p em {
+	text-transform: capitalize;
+	color: var(--peach);
+	font-style: normal;
+}
+
+.text-cont {
+	font-size: 13px;
+	line-height: 1.5;
+}
+
+.shopBtn {
+	display: flex;
+	color: #fff;
+	background: var(--peach);
+	padding: 8px 14px;
+	border-radius: 10px;
+	align-self: start;
+}
+
+.showcase-right {
+	width: 100%;
+	position: relative;
+}
+
+.showcase-right img:nth-child(1) {
+	width: 50%;
+}
+
+.showcase-right img:nth-child(2) {
+	width: 50%;
+}
+
+.showcase-right img:nth-child(3) {
+	position: absolute;
+	width: 25%;
+	top: -10px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.showcase-right img:nth-child(4) {
+	position: absolute;
+	width: 25%;
+	bottom: -10px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.design-top {
+	background: var(--butter);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+	gap: 20px;
+	width: 100%;
+	padding: 40px 20px;
+}
+
+.design-top img {
+	object-fit: contain;
+	width: calc(20% - 20px);
+	height: 40px;
+}
+
+.design-bottom {
+	background: var(--grey);
+	width: 100%;
+	padding: 50px 20px;
+}
+
+.products-box {
+	display: grid;
+	grid-template-columns: repeat(
+		14,
+		1fr
+	);
+	padding: 20px;
+}
+
+.products-container {
+	grid-column-start: 1;
+	grid-column-end: 15;
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 50px;
+}
+
+.product-wrapper {
+	width: 100%;
+}
+
+.product-wrapper img {
+	width: 100%;
+	object-fit: cover;
+}
+
+.product-wrapper .stars {
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	flex-direction: row;
+}
+
+.product-wrapper .stars img {
+	width: 20px;
+}
+
+.product-details {
+	display: flex;
+	justify-content: start;
+	align-items: stretch;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.product-details a {
+	display: flex;
+	color: #fff;
+	background: var(--peach);
+	padding: 8px 14px;
+	border-radius: 10px;
+	align-self: start;
+}
+
+@media screen and (min-width: 768px) {
+	.top-header .subheading {
+		grid-column-start: 2;
+		grid-column-end: 14;
+	}
+
+	.menubar {
+		display: none;
+	}
+
+	.showcase-container {
+		grid-column-start: 2;
+		grid-column-end: 14;
+		flex-direction: row;
+	}
+
+	.design-top img {
+		width: 100%;
+	}
+
+	.products-container {
+		grid-column-start: 2;
+		grid-column-end: 14;
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.products-container {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+}
