@@ -23,7 +23,6 @@ const Designers = () => {
 					alt="Vector"
 				/>
 			</section>
-			<section className="design-bottom"></section>
 		</section>
 	);
 };

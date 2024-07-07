@@ -19,14 +19,14 @@ const Showcase = () => {
 						/>
 					</div>
 					<div className="text-catch">
-						<p>
+						<span>
 							Welcome to{" "}
-							<em>Fragrance Hub</em>:
-						</p>
-						<p>
+							<em>Fragrance Hub</em>: {" "}
+						</span>
+						<span>
 							Find your scent and Unveil
 							Essence of Luxury
-						</p>
+						</span>
 					</div>
 					<p className="text-cont">
 						Experience our art of
@@ -34,7 +34,10 @@ const Showcase = () => {
 						in our collection of
 						exquisite fragrances
 					</p>
-					<Link className="shopBtn" href="#products">
+					<Link
+						className="shopBtn"
+						href="#products"
+					>
 						Shop Now
 					</Link>
 				</section>

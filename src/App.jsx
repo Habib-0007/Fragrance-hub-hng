@@ -5,6 +5,7 @@ import {
 
 // Components
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 // Pages
 import Home from "./pages/Home";
@@ -23,21 +24,22 @@ const App = () => {
 					element={<Home />}
 				/>
 				<Route
-					exact
+			
 					path="/products/:id"
 					element={<ProductDetails />}
 				/>
 				<Route
-					exact
+					
 					path="/cart"
 					element={<Cart />}
 				/>
 				<Route
-					exact
+					
 					path="/checkout"
 					element={<Checkout />}
 				/>
 			</Routes>
+			<Footer />
 		</section>
 	);
 };

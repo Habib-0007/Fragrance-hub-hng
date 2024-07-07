@@ -32,7 +32,7 @@ const ProductsList = () => {
 						key={data.id}
 					>
 						<img
-							src={data.image}
+							src={`/${data.image}`}
 							className=""
 							load="lazy"
 						/>
