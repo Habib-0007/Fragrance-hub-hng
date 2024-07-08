@@ -3,21 +3,17 @@ import React, {
 	useEffect,
 } from "react";
 import { Link } from "react-router-dom";
-import Data from "../Data";
 
-const ProductsList = () => {
+const SimilarProducts = ({ data }) => {
 	const [product, setProduct] =
 		useState([]);
 	const [loading, setLoading] =
 		useState(true);
 	let componentMounted = true;
-
-	const data = Data();
-
 	useEffect(() => {
 		setTimeout(() => {
 			if (componentMounted) {
-				setProduct(data);
+				setProduct(data.slice(0, 3));
 				setLoading(false);
 			}
 		}, 1000);
@@ -26,6 +22,7 @@ const ProductsList = () => {
 	const ShowProducts = () => (
 		<section className="products-box">
 			<section className="products-container">
+<strong>Other Products</strong>
 				{product.map(data => (
 					<section
 						className="product-wrapper"
@@ -71,10 +68,10 @@ const ProductsList = () => {
 				{loading ? (
 					"Loading..."
 				) : (
-						<ShowProducts />
+					<ShowProducts />
 				)}
 			</section>
 		</section>
 	);
 };
-export default ProductsList;
+export default SimilarProducts;

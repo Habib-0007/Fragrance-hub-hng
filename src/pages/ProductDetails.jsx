@@ -6,6 +6,8 @@ import { useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import Data from "../Data";
 
+import SimilarProducts from "../components/SimilarProducts";
+
 export const addCart = product => ({
 	type: "ADD_ITEM_TO_CART",
 	payload: product,
@@ -13,7 +15,10 @@ export const addCart = product => ({
 
 const ProductDetails = () => {
 	const { id } = useParams();
-	console.log(id);
+	const [
+		otherProducts,
+		setOtherProducts,
+	] = useState([]);
 	const [product, setProduct] =
 		useState([]);
 	const [loading, setLoading] =
@@ -32,6 +37,12 @@ const ProductDetails = () => {
 				data.find(
 					currentProduct =>
 						currentProduct.id == id
+				)
+			);
+			setOtherProducts(
+				data.filter(
+					currentProduct =>
+						currentProduct.id != id
 				)
 			);
 			setLoading(false);
@@ -54,7 +65,9 @@ const ProductDetails = () => {
 			</div>
 			<div className="dis-details">
 				<h1>{product.title}</h1>
-				<strong>£{product.price}</strong>
+				<strong>
+					£{product.price}
+				</strong>
 				<p className="stars">
 					<img
 						src="/Fragrance hub/Icons/Rating.svg"
@@ -77,7 +90,9 @@ const ProductDetails = () => {
 						alt="Rating"
 					/>
 				</p>
-				<h4>{product.reviews} reviews</h4>
+				<h4>
+					{product.reviews} reviews
+				</h4>
 				<p>{product.description}</p>
 				<button
 					type="button"
@@ -98,7 +113,12 @@ const ProductDetails = () => {
 				{loading ? (
 					"Loading..."
 				) : (
-					<ShowProduct />
+					<section>
+						<ShowProduct />
+						<SimilarProducts
+							data={otherProducts}
+						/>
+					</section>
 				)}
 			</section>
 		</section>

@@ -390,6 +390,23 @@ footer .copy {
 	font-size: 17px;
 }
 
+.cart-box {
+	display: grid;
+	grid-template-columns: repeat(
+		15,
+		1fr
+	);
+	padding: 20px;
+}
+
+.cart-container {
+	grid-column-start: 1;
+	grid-column-end: 15;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
 @media screen and (max-width: 768px) {
 	.head-links,
 	.uti-icons {
