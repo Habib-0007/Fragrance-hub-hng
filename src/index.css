@@ -374,7 +374,8 @@ footer .copy {
 .displayed-product .dis-details {
 	display: flex;
 	justify-content: space-between;
-	align-items: start;
+	align-items: center;
+	text-align: center;
 	flex-direction: column;
 	gap: 10px;
 	width: 100%;
@@ -767,6 +768,11 @@ footer .copy {
 	.below-header-container {
 		grid-column-start: 3;
 		grid-column-end: 13;
+	}
+
+	.displayed-product .dis-details {
+		align-items: start;
+		text-align: left;
 	}
 }
 
