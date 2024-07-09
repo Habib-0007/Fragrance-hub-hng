@@ -71,7 +71,16 @@ const ProductsList = () => {
 				{loading ? (
 					"Loading..."
 				) : (
+					<section>
+						<div
+						
+							className="cat"
+						>
+							<p>Categories </p>
+							<p>Products </p>
+						</div>
 						<ShowProducts />
+					</section>
 				)}
 			</section>
 		</section>
