@@ -141,24 +141,25 @@ const Cart = () => {
 				<div className="cart-body-wrapper">
 					{cart.length !== 0 &&
 						cart.map(cartItems)}
-						<div className="amounts">
-				<div>
-					<p>Subtotal</p>
-					<strong>£{amount}</strong>
-				</div>
-				<div>
-					<p>Shipping</p>
-					<strong>£20</strong>
-				</div>
-				<div>
-					<p>TOTAL</p>
-					<strong>
-						£{amount + 20}
-					</strong>
-				</div>
-				</div>
-			
-				</div>
+				{cart.length !== 0 && (	
+					<div className="amounts">
+						<div>
+							<p>Subtotal</p>
+							<strong>£{amount}</strong>
+						</div>
+						<div>
+							<p>Shipping</p>
+							<strong>£20</strong>
+						</div>
+						<div>
+							<p>TOTAL</p>
+							<strong>
+								£{amount + 20}
+							</strong>
+						</div>
+					</div>
+				)}
+				</div> 
 				{cart.length !== 0 && buttons()}
 			</section>
 		</section>
