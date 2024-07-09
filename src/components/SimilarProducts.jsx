@@ -13,7 +13,7 @@ const SimilarProducts = ({ data }) => {
 	useEffect(() => {
 		setTimeout(() => {
 			if (componentMounted) {
-				setProduct(data.slice(0, 3));
+				setProduct(data.slice(0, 4));
 				setLoading(false);
 			}
 		}, 1000);
@@ -22,23 +22,22 @@ const SimilarProducts = ({ data }) => {
 	const ShowProducts = () => (
 		<section className="products-box">
 			<section className="products-container">
-<strong>Other Products</strong>
-				{product.map(data => (
+				{product.map(item => (
 					<section
 						className="product-wrapper"
-						key={data.id}
+						key={item.id}
 					>
 						<img
-							src={`/${data.image}`}
+							src={`/${item.image}`}
 							className=""
 							load="lazy"
 						/>
 						<div className="product-details">
 							<strong className="product-name">
-								{data.title}
+								{item.title}
 							</strong>
 							<p className="product-price">
-								£{data.price}
+								£{item.price}
 							</p>
 							<div className="stars">
 								<img src="/Fragrance hub/Icons/Rating.svg" />
@@ -48,10 +47,10 @@ const SimilarProducts = ({ data }) => {
 								<img src="/Fragrance hub/Icons/Rating.svg" />
 							</div>
 							<p className="product-reviews">
-								{data.reviews} reviews
+								{item.reviews} reviews
 							</p>
 							<Link
-								to={`/products/${data.id}`}
+								to={`/products/${item.id}`}
 							>
 								Buy Now
 							</Link>
@@ -68,7 +67,12 @@ const SimilarProducts = ({ data }) => {
 				{loading ? (
 					"Loading..."
 				) : (
-					<ShowProducts />
+					<section className="other">
+						<strong>
+							Other Products
+						</strong>
+						<ShowProducts />
+					</section>
 				)}
 			</section>
 		</section>

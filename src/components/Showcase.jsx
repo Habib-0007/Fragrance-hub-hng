@@ -5,41 +5,12 @@ const Showcase = () => {
 		<section className="showcase-box">
 			<section className="showcase-container">
 				<section className="showcase-left">
-					<div className="text">
-						New{" "}
-						<img
-							src="/Fragrance hub/Icons/streamline-emojis_sparkles.svg"
-							alt="streamline-emojis_sparkles"
-						/>{" "}
-						No. 1 in perfume retail
-						store{" "}
-						<img
-							src="/Fragrance hub/Icons/Chevron right.svg"
-							alt="Chevron right"
-						/>
-					</div>
-					<div className="text-catch">
-						<span>
-							Welcome to{" "}
-							<em>Fragrance Hub</em>: {" "}
-						</span>
-						<span>
-							Find your scent and Unveil
-							Essence of Luxury
-						</span>
-					</div>
-					<p className="text-cont">
-						Experience our art of
-						fragrances and also indulge
-						in our collection of
-						exquisite fragrances
+					<p>
+						Black Friday Deals up to 50%	off
 					</p>
-					<Link
-						className="shopBtn"
-						href="#products"
-					>
-						Shop Now
-					</Link>
+					<button className="shopBtn">
+						Shop now
+					</button>
 				</section>
 				<section className="showcase-right">
 					<img

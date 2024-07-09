@@ -2,89 +2,89 @@ const Data = () => {
 	const data = [
 		{
 			id: 1,
-			title: "Perfume One",
+			title: "Chanel N5 Eau de Parfum",
 			price: "50",
 			star: "3",
 			reviews: "20",
-			description:
-				"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illumex quos adipisci quaerat id unde qui doloremque impedit similique, repellendus numquam facere odio culpa, odit neque soluta ab, natus, molestiae!",
+			description:"Get the new Chanel N5 Eau de Parfum, long-lastingrefreshing scent up to 10hours made from beautiful flowers combined to make you feel elegant",
 			image:
 				"Fragrance hub/Product 1.png",
 		},
 		{
 			id: 2,
-			title: "Perfume Two",
+			title: "Chanel coco noir",
 			price: "45",
 			star: "4",
 			reviews: "50",
-			description:
-				"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illumex quos adipisci quaerat id unde qui doloremque impedit similique, repellendus numquam facere odio culpa, odit neque soluta ab, natus, molestiae!",
+			description: "Get the new Chanel coco noir, a sparkling burst of bergamot and Sicilian lemon, creating a vibrant opening",
 			image:
 				"Fragrance hub/Product 2.png",
 		},
 		{
 			id: 3,
-			title: "Perfume Three",
+			title: "Zara parfum",
 			price: "38",
 			star: "4",
 			reviews: "27",
 			description:
-				"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illumex quos adipisci quaerat id unde qui doloremque impedit similique, repellendus numquam facere odio culpa, odit neque soluta ab, natus, molestiae!",
+				"Get the new zara parfum, long-lasting refreshing scent made from beautiful flowers combined to make you feel elegant",
 			image:
 				"Fragrance hub/Product 3.png",
 		},
 		{
 			id: 4,
-			title: "Perfume Four",
+			title: "Calvin klein Euphoria",
 			price: "65",
 			star: "5",
 			reviews: "73",
 			description:
-				"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illumex quos adipisci quaerat id unde qui doloremque impedit similique, repellendus numquam facere odio culpa, odit neque soluta ab, natus, molestiae!",
+				"The new Calvin klein Euphoria, dive into a celestial journey with notes of lavender, vanilla, and amber, capturing the essence of a starlit night.",
 			image:
 				"Fragrance hub/Product 4.png",
 		},
 		{
 			id: 5,
-			title: "Perfume Five",
+			title:
+				"Whistbone white and black",
 			price: "48",
 			star: "3",
 			reviews: "44",
 			description:
-				"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illumex quos adipisci quaerat id unde qui doloremque impedit similique, repellendus numquam facere odio culpa, odit neque soluta ab, natus, molestiae!",
+				"Immerse yourself in a floral paradise with jasmine, lily of the valley, and sandalwood, evoking a serene escape.",
 			image:
 				"Fragrance hub/Product 5.png",
 		},
 		{
 			id: 6,
-			title: "Perfume Six",
+			title: "Saint laurent",
 			price: "56",
 			star: "5",
 			reviews: "60",
 			description:
-				"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illumex quos adipisci quaerat id unde qui doloremque impedit similique, repellendus numquam facere odio culpa, odit neque soluta ab, natus, molestiae!",
+				"A delicate blend of peony, pear, and musk, offering a soft and graceful scent for any occasion.",
 			image:
 				"Fragrance hub/Product 6.png",
 		},
 		{
 			id: 7,
-			title: "Perfume Seven",
+			title: "Givenchy L’interd",
 			price: "45",
 			star: "2",
 			reviews: "90",
 			description:
-				"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illumex quos adipisci quaerat id unde qui doloremque impedit similique, repellendus numquam facere odio culpa, odit neque soluta ab, natus, molestiae!",
+				"Refreshing and invigorating, combining sea salt, white florals,and driftwood for a coastal escape.",
 			image:
 				"Fragrance hub/Product 7.png",
 		},
 		{
 			id: 8,
-			title: "Perfume Eight",
+			title:
+				"Inspire perfume fragrance",
 			price: "50",
 			star: "3",
 			reviews: "70",
 			description:
-				"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illumex quos adipisci quaerat id unde qui doloremque impedit similique, repellendus numquam facere odio culpa, odit neque soluta ab, natus, molestiae!",
+				"A romantic evening fragrance with plum, rose, and cedarwood, creating an air of mystery and allure.",
 			image:
 				"Fragrance hub/Product 8.png",
 		},

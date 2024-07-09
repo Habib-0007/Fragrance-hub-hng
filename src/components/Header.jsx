@@ -1,12 +1,13 @@
-import { useState } from "react";
+import { useSelector } from "react-redux";
 import {
 	NavLink,
 	Link,
 } from "react-router-dom";
 
 const Header = () => {
-	const [show, setShow] =
-		useState(true);
+	const state = useSelector(
+		state => state.handleCart
+	);
 	return (
 		<header className="top-header">
 			<section className="subheading">
@@ -17,37 +18,19 @@ const Header = () => {
 					>
 						Fragrance Hub
 					</NavLink>
-					<nav
-						className={`${
-							show ? "show" : ""
-						} head-links`}
-					>
-						<Link href="/">Home</Link>
-						<Link href="/">
-							Products
-						</Link>
-						<Link href="/">
-							Contact
-						</Link>
-					</nav>
-					<div
-						className={`${
-							show ? "show" : ""
-						} uti-icons`}
-					>
+					<div className="uti-icons">
 						<img
 							src="/Fragrance hub/Icons/Search icon.svg"
 							alt="Search Icon"
 						/>
-					<Link to="/cart">	<img
-							src="/Fragrance hub/Icons/Cart icon.svg"
-							alt="Cart Icon"
-						/>
+						<Link to="/cart">
+							<p>{state.length}</p>
+							<img
+								src="/Fragrance hub/Icons/Cart icon.svg"
+								alt="Cart Icon"
+							/>
 						</Link>
 					</div>
-					<button className="menubar">
-						&#9776;
-					</button>
 				</section>
 			</section>
 		</header>

@@ -59,7 +59,6 @@ const Cart = () => {
 		</div>
 	);
 	const cartItems = product => (
-<>
 		<div
 			key={product.id}
 			className="cart-product"
@@ -78,12 +77,12 @@ const Cart = () => {
 				<div className="state-buttons">
 					<button
 						onClick={() =>
-							handleAdd(product)
+							handleDel(product)
 						}
 					>
 						<img
-							src="/Fragrance hub/Icons/plus icon.svg"
-							alt="plus-icon"
+							src="/Fragrance hub/Icons/Minus icon.svg"
+							alt="minus icon"
 						/>
 					</button>
 					<p>{product.quantity}</p>
@@ -93,8 +92,8 @@ const Cart = () => {
 						}
 					>
 						<img
-							src="/Fragrance hub/Icons/Minus icon.svg"
-							alt="minus-icon"
+							src="/Fragrance hub/Icons/plus icon.svg"
+							alt="plus icon"
 						/>
 					</button>
 				</div>
@@ -120,21 +119,6 @@ const Cart = () => {
 				</div>
 			</div>
 		</div>
-<div class="amounts">
-<div>
-<p>Subtotal</p>
-<strong>£{amount}</strong>
-</div>
-<div>
-<p>Shipping</p>
-<strong>£20</strong>
-</div>
-<div>
-<p>TOTAL</p>
-<strong>£{amount + 20}</strong>
-</div>
-</div>
-		</>
 	);
 	const buttons = () => (
 		<>
@@ -149,7 +133,7 @@ const Cart = () => {
 	return (
 		<section className="cart-box">
 			<section className="cart-container">
-				<h1 class="cart-title">
+				<h1 className="cart-title">
 					Shopping Cart
 				</h1>
 				{cart.length === 0 &&
@@ -157,6 +141,23 @@ const Cart = () => {
 				<div className="cart-body-wrapper">
 					{cart.length !== 0 &&
 						cart.map(cartItems)}
+						<div className="amounts">
+				<div>
+					<p>Subtotal</p>
+					<strong>£{amount}</strong>
+				</div>
+				<div>
+					<p>Shipping</p>
+					<strong>£20</strong>
+				</div>
+				<div>
+					<p>TOTAL</p>
+					<strong>
+						£{amount + 20}
+					</strong>
+				</div>
+				</div>
+			
 				</div>
 				{cart.length !== 0 && buttons()}
 			</section>
