@@ -42,7 +42,9 @@ body {
 }
 
 .heading-container .heading {
-	font-size: 16px;
+	font-size: 18px;
+	font-weight: bolder;
+	color: #000;
 }
 
 .heading-container .head-links {
@@ -65,6 +67,11 @@ body {
 	align-items: center;
 	flex-direction: row;
 	gap: 12px;
+}
+
+header .menubar {
+	background: transparent;
+	font-size: 24px;
 }
 
 .showcase-box {
@@ -404,13 +411,333 @@ footer .copy {
 	grid-column-end: 15;
 	display: flex;
 	justify-content: space-between;
+	align-items: stretch;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.cart-body-wrapper {
+	display: flex;
+	justify-content: start;
+	align-items: stretch;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.cart-title {
+	font-size: 17px;
+}
+
+.cart-product {
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+	flex-direction: column;
+	gap: 16px;
+	width: 100%;
+}
+
+.cart-product-top {
+	display: flex;
+	justify-content: space-between;
 	align-items: center;
+	flex-direction: row;
+	gap: 10px;
+	width: 100%;
+}
+
+.cart-product-top div {
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 33.33%;
+}
+
+.cart-product-top h3 {
+	width: 33.33%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-size: 18px;
+}
+
+.cart-product-top img {
+	width: 100%;
+	object-fit: cover;
+}
+
+.cart-product-bottom {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+	gap: 10px;
+	width: 100%;
+}
+
+.cart-product-bottom .cart-quantity {
+	font-weight: 700;
+}
+
+.cart-product-bottom .state-buttons {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+	gap: 10px;
+}
+
+.cart-product-bottom
+	.state-buttons
+	button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	flex-direction: row;
+	gap: 10px;
+	height: 28px;
+	width: 28px;
+	border-radius: 4px;
+}
+
+.empty-cart {
+	display: flex;
+	justify-content: start;
+	align-items: start;
+	padding: 24px;
+}
+
+.empty-cart h3 {
+	font-size: 20px;
+}
+
+.amounts {
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+	flex-direction: column;
+	gap: 12px;
+	margin-top: 14px;
+}
+
+.amounts div {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+	gap: 12px;
+}
+
+.amounts div:last-child p,
+.amounts div:last-child strong {
+	font-size: 24px;
+}
+
+.amounts div p {
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.amounts div strong {
+	display: block;
+	font-size: 20px;
+}
+
+.checkout-url {
+	margin: 20px auto;
+}
+
+.checkout-url a {
+	text-align: center;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	padding: 14px 50px;
+	background: var(--peach);
+	color: #fff;
+	border-radius: 10px;
+	align-self: center;
+}
+
+.checkout {
+	padding: 20px;
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.checkout .checkout-header {
+	display: flex;
+	justify-content: stretch;
+	align-items: end;
+	flex-direction: row;
+	background: #fff;
+}
+
+.checkout .checkout-header button {
+	background: transparent;
+	width: 100%;
+	padding: 12px 4px;
+	border-bottom: 3px solid var(--grey);
+	color: var(--grey);
+	font-size: 16px;
+	font-family: "Open Sans", sans-serif;
+	transition: all ease 400ms;
+}
+
+.checkout .checkout-header button.show {
+	border-bottom: 3px solid var(--peach);
+	color: #000;
+}
+
+.info-form,
+.address-form,
+.payment-form {
+	width: 100%;
+	display: flex;
+	justify-content: start;
+	align-items: stretch;
+	flex-direction: column;
+	gap: 24px;
+	padding: 40px 5px;
+	transition: all ease 400ms;
+}
+
+.info-form div,
+.address-form div,
+.payment-form div {
+	width: 100%;
+	display: flex;
+	justify-content: start;
+	align-items: stretch;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.address-form div.row,
+.payment-form div.row {
+	flex-direction: row;
+}
+
+.info-form div label,
+.address-form div label,
+.payment-form div label {
+	font-size: 18px;
+}
+
+.info-form div input,
+.address-form div input,
+.payment-form div input {
+	display: block;
+	width: 100%;
+	border: 1px solid #000;
+	padding: 14px;
+	font-size: 18px;
+	border-radius: 8px;
+}
+
+.payment-form p.checkbox-area {
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	flex-direction: row;
+	gap: 10px;
+}
+
+.payment-form p.checkbox-area input {
+	accent-color: #000;
+	display: block;
+}
+
+.payment-form p.checkbox-area label {
+	display: block;
+	font-size: 16px;
+	width: 100%;
+}
+
+.card-number {
+	position: relative;
+	padding-left: 65px;
+}
+
+.card-number img {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0;
+}
+
+.info-form button,
+.address-form button,
+.payment-form button {
+	font-family: "Open Sans", sans-serif;
+	display: block;
+	width: 100%;
+	padding: 14px;
+	font-size: 18px;
+	border-radius: 8px;
+	color: #fff;
+	background: var(--peach);
+}
+
+.info-form button:hover,
+.address-form button:hover,
+.payment-form button:hover {
+	background: #000;
+}
+
+.payment-form div.payment-top {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+	gap: 10px;
+}
+
+.payment-top img {
+	width: default;
 }
 
 @media screen and (max-width: 768px) {
-	.head-links,
-	.uti-icons {
-		display: none !important;
+	.heading-container nav.head-links,
+	.heading-container div.uti-icons {
+		display: none;
+	}
+
+	.heading-container
+		nav.head-links.show {
+		display: flex;
+		flex-direction: column;
+		gap: 14px;
+		position: absolute;
+		top: 60px;
+		left: 50%;
+		transform: translateX(-50%);
+		background: #000;
+		width: 100%;
+		padding: 40px 0;
+	}
+
+	.heading-container
+		nav.head-links.show
+		a {
+		color: #fff;
+		font-size: 18px;
+	}
+
+	.heading-container
+		div.uti-icons.show {
+		background: #fff;
+		color: #000;
+		width: 100%;
+		position: absolute;
+		top: 600px;
+		left: 50%;
+		transform: translateX(-50%);
 	}
 }
 
@@ -463,6 +790,10 @@ footer .copy {
 	}
 
 	.displayed-product {
+		flex-direction: row;
+	}
+
+	.cart-product {
 		flex-direction: row;
 	}
 }

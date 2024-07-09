@@ -3,6 +3,10 @@ import {
 	useDispatch,
 } from "react-redux";
 import { NavLink } from "react-router-dom";
+import {
+	useState,
+	useEffect,
+} from "react";
 
 const addCart = product => ({
 	type: "ADD_ITEM_TO_CART",
@@ -35,61 +39,72 @@ const Cart = () => {
 		dispatch(delCart(item));
 	};
 
+	const [amount, setAmount] =
+		useState(0);
+
+	useEffect(() => {
+		setAmount(
+			cart.reduce(
+				(acc, item) =>
+					acc +
+					item.price * item.quantity,
+				0
+			)
+		);
+	}, [cart]);
+
 	const emptyCart = () => (
-		<div className="">
-			<div className="">
-				<div className="">
-					<h3 className="">
-						Your Cart is Empty
-					</h3>
-				</div>
-			</div>
+		<div className="empty-cart">
+			<h3>Your Cart is Empty</h3>
 		</div>
 	);
 	const cartItems = product => (
+<>
 		<div
 			key={product.id}
 			className="cart-product"
 		>
-			<div className="">
+			<div className="cart-product-top">
 				<div>
 					<img
 						src={product.image}
 						alt={product.title}
-						className=""
 					/>
 				</div>
-				<h3 className="">
-					{product.title}
-				</h3>
+				<h3>{product.title}</h3>
+				<div>100ml</div>
 			</div>
-			<div className="">
-				<div>
-					<button onClick={() =>
+			<div className="cart-product-bottom">
+				<div className="state-buttons">
+					<button
+						onClick={() =>
 							handleAdd(product)
-						}>
+						}
+					>
 						<img
 							src="/Fragrance hub/Icons/plus icon.svg"
 							alt="plus-icon"
 						/>
 					</button>
 					<p>{product.quantity}</p>
-					<button onClick={() =>
+					<button
+						onClick={() =>
 							handleAdd(product)
-						}>
+						}
+					>
 						<img
 							src="/Fragrance hub/Icons/Minus icon.svg"
 							alt="minus-icon"
 						/>
 					</button>
 				</div>
-				<p className="">
+				<p className="cart-quantity">
 					{product.quantity} X £
 					{product.price} = £
 					{product.quantity *
 						product.price}
 				</p>
-				<div className="">
+				<div className="delBtn">
 					<button
 						type="button"
 						className=""
@@ -105,14 +120,26 @@ const Cart = () => {
 				</div>
 			</div>
 		</div>
+<div class="amounts">
+<div>
+<p>Subtotal</p>
+<strong>£{amount}</strong>
+</div>
+<div>
+<p>Shipping</p>
+<strong>£20</strong>
+</div>
+<div>
+<p>TOTAL</p>
+<strong>£{amount + 20}</strong>
+</div>
+</div>
+		</>
 	);
 	const buttons = () => (
 		<>
-			<div className="">
-				<NavLink
-					to="/checkout"
-					className=""
-				>
+			<div className="checkout-url">
+				<NavLink to="/checkout">
 					Proceed to Checkout
 				</NavLink>
 			</div>
@@ -122,9 +149,12 @@ const Cart = () => {
 	return (
 		<section className="cart-box">
 			<section className="cart-container">
+				<h1 class="cart-title">
+					Shopping Cart
+				</h1>
 				{cart.length === 0 &&
 					emptyCart()}
-				<div className="">
+				<div className="cart-body-wrapper">
 					{cart.length !== 0 &&
 						cart.map(cartItems)}
 				</div>

@@ -1,14 +1,27 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import {
+	NavLink,
+	Link,
+} from "react-router-dom";
 
 const Header = () => {
+	const [show, setShow] =
+		useState(true);
 	return (
 		<header className="top-header">
 			<section className="subheading">
 				<section className="heading-container">
-					<h1 className="heading">
+					<NavLink
+						to="/"
+						className="heading"
+					>
 						Fragrance Hub
-					</h1>
-					<nav className="head-links">
+					</NavLink>
+					<nav
+						className={`${
+							show ? "show" : ""
+						} head-links`}
+					>
 						<Link href="/">Home</Link>
 						<Link href="/">
 							Products
@@ -17,15 +30,20 @@ const Header = () => {
 							Contact
 						</Link>
 					</nav>
-					<div className="uti-icons">
+					<div
+						className={`${
+							show ? "show" : ""
+						} uti-icons`}
+					>
 						<img
 							src="/Fragrance hub/Icons/Search icon.svg"
 							alt="Search Icon"
 						/>
-						<img
+					<Link to="/cart">	<img
 							src="/Fragrance hub/Icons/Cart icon.svg"
 							alt="Cart Icon"
 						/>
+						</Link>
 					</div>
 					<button className="menubar">
 						&#9776;
